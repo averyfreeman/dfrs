@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-09-27T22:38:45.735014Z",
+  "decision_count": 1,
+  "decisions": [
+    {
+      "number": 1,
+      "title": "Platform-aware mount discovery behind a stable CLI",
+      "status": "accepted",
+      "filename": "0001-platform-aware-mount-discovery.md",
+      "path": "docs/adr/0001-platform-aware-mount-discovery.md",
+      "body": "---\nstatus: accepted\n---\n\n# Platform-aware mount discovery behind a stable CLI\n\ndfrs will keep its public surface as the existing CLI and flags while moving\nmount enumeration behind a platform-aware provider: macOS uses native mount\ndiscovery so APFS is visible, while Linux keeps deterministic mount-file\nparsing for explicit `--mounts` inputs and can use native discovery for its\ndefault. This preserves scripts and fixtures without treating a Linux-only\nmount file as a cross-platform contract, and keeps filtering, statfs, and\nrendering above the provider boundary.\n"
+    }
+  ]
+}
