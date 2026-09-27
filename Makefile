@@ -14,8 +14,6 @@ CARGO := cargo
 SCDOC := scdoc
 INSTALL := install
 GIT := git
-GPG := gpg
-SED := sed
 
 DEBUG := 0
 ifeq ($(DEBUG), 0)
@@ -38,9 +36,9 @@ test:
 
 lint:
 	$(CARGO) fmt -- --check
-	$(CARGO) check
-	find . -name '*.rs' -exec touch {} +
-	$(CARGO) clippy --all -- -D warnings
+	$(CARGO) check --locked
+	$(CARGO) clippy --locked --all-targets -- -D warnings
+	$(CARGO) doc --locked --no-deps --document-private-items
 
 docs: man completions
 
@@ -72,11 +70,5 @@ uninstall:
 	$(RM) -f $(DESTDIR)$(DATAROOTDIR)/fish/vendor_completions.d/dfrs.fish
 
 release: all
-	$(INSTALL) -d $(TARBALLDIR)
-	@read -p 'version> ' TAG && \
-		$(SED) "s|version = .*|version = \"$$TAG\"|" -i Cargo.toml && \
-		$(CARGO) build --release && \
-		$(GIT) commit --gpg-sign --message "version: release $$TAG" Cargo.toml Cargo.lock && \
-		$(GIT) tag --sign --message "version: release $$TAG" $$TAG && \
-		$(GIT) archive -o $(TARBALLDIR)/dfrs-$$TAG.$(TARBALLFORMAT) --format $(TARBALLFORMAT) --prefix=dfrs-$$TAG/ $$TAG && \
-		$(GPG) --detach-sign $(TARBALLDIR)/dfrs-$$TAG.$(TARBALLFORMAT)
+	@echo "dfrs 0.8.0 is staged on release/0.8.0; use the Git-BBQ tag and push workflow."
+	@echo "This fork intentionally does not create signed archives or a GitHub Release."

@@ -1,0 +1,19 @@
+---
+title: Release notes
+description: The fork's 0.8.0 release line.
+---
+
+## 0.8.0
+
+The fork-ready release line upgrades the project to Rust 1.96.0 and adds:
+
+- native macOS APFS mount discovery;
+- Linux x86_64 and arm64 validation;
+- explicit mount-file overrides for fixtures and diagnostics;
+- df-like default filtering with pseudo-mount suppression;
+- escaped mount-path parsing and overflow-safe usage arithmetic;
+- CLI-focused RustDoc and this GitHub Pages site.
+
+The release is staged for review on `release/0.8.0`. It uses the unprefixed
+SemVer tag `0.8.0` and does not publish a GitHub Release or binary assets as
+part of this handoff.

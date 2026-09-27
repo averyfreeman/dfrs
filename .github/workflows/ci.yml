@@ -1,72 +1,57 @@
----
 name: CI
 
 on:
   push:
   pull_request:
-    branches: [main]
+    branches: [main, release/0.8.0]
   schedule:
-    - cron: '0 0 * * *'  # once a day
+    - cron: "0 0 * * *"
 
 env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  build:
-    name: CI with ${{ matrix.rust }} on ${{ matrix.os }} for ${{ matrix.arch }}
-    runs-on: ${{ matrix.os }}
+  native:
+    name: Rust 1.96 on ${{ matrix.runner }} (${{ matrix.target }})
+    runs-on: ${{ matrix.runner }}
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest]
-        rust: [stable, beta, nightly]
-        arch:
-          - x86_64-unknown-linux-gnu
-          - x86_64-unknown-linux-musl
-          - i686-unknown-linux-musl
-          - armv5te-unknown-linux-gnueabi
-          - armv7-unknown-linux-gnueabihf
-          - aarch64-unknown-linux-gnu
-          - powerpc64le-unknown-linux-gnu
-          - s390x-unknown-linux-gnu
-          - riscv64gc-unknown-linux-gnu
-
+        include:
+          - runner: macos-26
+            target: aarch64-apple-darwin
+          - runner: ubuntu-24.04
+            target: x86_64-unknown-linux-gnu
+          - runner: ubuntu-24.04-arm
+            target: aarch64-unknown-linux-gnu
     steps:
-      - uses: actions/checkout@v3
-
-      - uses: actions-rs/toolchain@v1
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@master
         with:
-          toolchain: ${{ matrix.rust }}
-          target: ${{ matrix.arch }}
-          override: true
+          toolchain: 1.96.0
+          targets: ${{ matrix.target }}
           components: rustfmt, clippy
+      - name: Build
+        run: cargo build --locked --target ${{ matrix.target }}
+      - name: Test
+        run: cargo test --locked --target ${{ matrix.target }}
 
-      - uses: actions-rs/cargo@v1
-        with:
-          use-cross: true
-          command: build
-          args: --target ${{ matrix.arch }}
-
-      - uses: actions-rs/cargo@v1
-        with:
-          use-cross: true
-          command: test
-          args: --target ${{ matrix.arch }}
-
-      - name: cargo fmt
-        uses: actions-rs/cargo@v1
-        with:
-          command: fmt
-          args: --all -- --check
-
-      - name: cargo clippy
-        uses: actions-rs/cargo@v1
-        with:
-          command: clippy
-          args: -- -D warnings
-
-  cargo-deny:
-    runs-on: ubuntu-latest
+  quality:
+    name: Formatting, Clippy, docs, and dependency policy
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v3
-      - uses: EmbarkStudios/cargo-deny-action@v1
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: 1.96.0
+          components: rustfmt, clippy, rust-docs
+      - name: Format
+        run: cargo fmt --all -- --check
+      - name: Clippy
+        run: cargo clippy --locked --all-targets -- -D warnings
+      - name: RustDoc
+        run: cargo doc --locked --no-deps --document-private-items
+      - name: Cargo deny
+        uses: EmbarkStudios/cargo-deny-action@v2
+        with:
+          command: check

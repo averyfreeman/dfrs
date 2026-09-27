@@ -1,0 +1,30 @@
+---
+title: dfrs documentation
+description: A colorful, platform-aware terminal filesystem usage viewer.
+template: splash
+hero:
+  title: See your filesystems clearly.
+  tagline: dfrs reports capacity, usage, and mount topology with native APFS and Linux discovery.
+  actions:
+    - text: Install from crates.io
+      link: https://crates.io/crates/dfrs
+      icon: external
+    - text: Read the CLI reference
+      link: /dfrs/cli/
+      variant: minimal
+---
+
+## What dfrs does
+
+`dfrs` is a terminal-only companion to `df(1)`. It adds a compact usage bar,
+colored thresholds, configurable columns, shell completions, and path-aware
+mount selection.
+
+The 0.8.0 fork targets Rust 1.96.0 on macOS arm64 and Linux x86_64/arm64.
+macOS mount discovery uses the native APFS-aware API; Linux uses its
+kernel-backed mount listing unless `--mounts FILE` is supplied.
+
+## RustDoc
+
+The [generated RustDoc](/dfrs/rustdoc/dfrs/index.html) records the low-level
+provider, parser, arithmetic, and rendering details for maintainers.

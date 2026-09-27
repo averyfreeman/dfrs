@@ -7,7 +7,7 @@ languages:
 matt:
     repository: https://github.com/mattpocock/skills.git
     commit: c55ee46073ed923f86ce59a5eb3b6d895095d1b7
-    path: .gitbbq/mattpocock
+    path: .agents/mattpocock
 hooks:
     enabled: true
     required:

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "files": {
+    ".agents/mattpocock/DEPENDENCY.yaml": "70e8e46dbb5313b0295f768dce893a8c0d8f0c810ba0a524bafdf370f8b0fb8c",
+    ".gitbbq-manifest.yaml": "ddaa6bf44cc0741e5c2eb5755c24654b1ac9c14c3f6460ef021c3f41c8cd914c",
+    ".gitbbq/.gitignore": "bea45574d15b3fc3d5218fd2dad6e66bdb9fba6b57867ede863383ec55219ebe",
+    ".gitbbq/hooks.json": "602df880af8a1daa40beb0b19586bf3c2423c6db52c825316218be8ef5059f17",
+    ".gitbbq/mattpocock/DEPENDENCY.yaml": "70e8e46dbb5313b0295f768dce893a8c0d8f0c810ba0a524bafdf370f8b0fb8c",
+    ".githabits.yaml": "dd14606ba44b667f817605729414abe977b11c1f5541c9a7e06ccaca04e1345d",
+    "AGENTS.md": "8dd55f368ded7bb274c085a1e954129b02e88589b98daa01a1d1d121ff90075c",
+    "CONTEXT.md": "4312290c92da024e6d3ebb19b56d772a11bdb4129b9a89000b69fea1b767d1a2",
+    "CONTEXT-MAP.md": "a3db2d4a98382b184fed7c5f4a5ba1eec9ed9a8f55f2b762f6996bc92c73a7ac",
+    "architecture-contract.yaml": "f93ca6a0e20c72c322c59ff4d7d9dece71760dd7dafdcde9ebba95fac93abf51",
+    "docs/adr/0001-platform-aware-mount-discovery.md": "a527ab732ca27bcf535f2ae9b0795a6964d1553605e5b9f0d25b330854288b18",
+    "docs/adr/index.json": "972768603de2bc33144952ba353dd11dd2fc99a83c3b0793e8f01eedd3374af4",
+    "implementation-plan.md": "f8a973fd122ef47285f9b9e0703aee966dfc65ddc484b2f2878f238899ad9d66"
+  }
+}
