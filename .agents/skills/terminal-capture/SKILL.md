@@ -190,4 +190,3 @@ wrong: fix the workflow script pacing and re-record; do not hand-edit frames.
 - The bundled renderer expects asciicast v2. asciinema 3.x records v3
   ("asciicast" header line); convert with `asciinema convert -f asciicast-v2 in.cast out.cast`
   or record with the pip-installed 2.x
-
