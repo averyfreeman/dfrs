@@ -14,4 +14,6 @@ Upgrade dfrs for Rust 1.96.0 with native APFS support on macOS arm64, required L
 
 ## Verification
 
-`cargo test --locked`
+```sh
+cargo test --locked
+```
