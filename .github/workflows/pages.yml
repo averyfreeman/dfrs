@@ -19,15 +19,15 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12
+          package_json_file: docs-site/package.json
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
           cache-dependency-path: docs-site/pnpm-lock.yaml
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 12
-          package_json_file: docs-site/package.json
       - name: Install Rust 1.96.0
         run: |
           rustup toolchain install 1.96.0 --profile minimal
