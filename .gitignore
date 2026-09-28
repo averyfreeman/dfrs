@@ -4,5 +4,6 @@ docs-site/dist
 docs-site/.astro
 docs-site/.generated
 docs-site/public/rustdoc
+.env*
 **/*.rs.bk
 *.1
