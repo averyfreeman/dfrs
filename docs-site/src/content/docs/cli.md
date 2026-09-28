@@ -30,7 +30,9 @@ dfrs --color always --all --mounts tests/fixtures/mounts.txt
 The first command shows the concise capacity-bearing view; `--all` also keeps
 pseudo mounts such as `tmpfs` in the report.
 
-![Default and --all dfrs reports](/dfrs/demos/dfrs-visibility.gif)
+<div class="dfrs-terminal-still">
+  <img src="/dfrs/demos/dfrs-visibility.png" alt="Default and --all dfrs reports" />
+</div>
 
 ### Custom output columns
 
@@ -43,7 +45,9 @@ dfrs --color always --si \
 Use `--columns` to keep the report focused, and `--si` when decimal units are
 more useful than powers of 1024.
 
-![Custom dfrs output columns](/dfrs/demos/dfrs-columns.gif)
+<div class="dfrs-terminal-still">
+  <img src="/dfrs/demos/dfrs-columns.png" alt="Custom dfrs output columns" />
+</div>
 
 ## Visibility
 

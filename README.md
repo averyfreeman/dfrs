@@ -6,7 +6,7 @@ Display file system space usage using graphs and colors
 
 ![](contrib/screenshot.png)
 
-![dfrs reporting filesystem usage](docs-site/public/demos/dfrs-readme.gif)
+<img src="docs-site/public/demos/dfrs-readme.png" alt="dfrs reporting filesystem usage" width="800">
 
 *dfrs* displays the amount of disk space available on the file system
 containing each file name argument. If no file name is given, the space
@@ -21,7 +21,7 @@ Read the [online documentation](https://averyfreeman.github.io/dfrs/) for the
 CLI reference, architecture notes, development workflow, and generated
 [RustDoc](https://averyfreeman.github.io/dfrs/rustdoc/dfrs/).
 
-The 0.8.1 fork supports macOS arm64 and Linux x86_64/arm64 with Rust 1.96.0.
+The 0.8.2 fork supports macOS arm64 and Linux x86_64/arm64 with Rust 1.96.0.
 Windows and Intel macOS are outside this release line.
 
 ## Installation

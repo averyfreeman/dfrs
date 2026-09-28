@@ -14,13 +14,23 @@ hero:
       variant: minimal
 ---
 
+import AsciinemaDemo from "../../components/AsciinemaDemo.astro";
+
+## See dfrs in action
+
+<AsciinemaDemo
+  cast="/dfrs/demos/dfrs-landing.cast"
+  poster="/dfrs/demos/dfrs-readme.png"
+  alt="A terminal recording of dfrs typing a command and painting a filesystem usage report"
+ />
+
 ## What dfrs does
 
 `dfrs` is a terminal-only companion to `df(1)`. It adds a compact usage bar,
 colored thresholds, configurable columns, shell completions, and path-aware
 mount selection.
 
-The 0.8.0 fork targets Rust 1.96.0 on macOS arm64 and Linux x86_64/arm64.
+The 0.8.2 fork targets Rust 1.96.0 on macOS arm64 and Linux x86_64/arm64.
 macOS mount discovery uses the native APFS-aware API; Linux uses its
 kernel-backed mount listing unless `--mounts FILE` is supplied.
 

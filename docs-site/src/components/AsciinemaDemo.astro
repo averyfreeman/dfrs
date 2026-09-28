@@ -1,0 +1,71 @@
+---
+interface Props {
+  cast: string;
+  poster: string;
+  alt?: string;
+}
+
+const {
+  cast,
+  poster,
+  alt = "Animated terminal recording",
+} = Astro.props;
+---
+
+<div class="dfrs-asciinema-demo" data-cast={cast} aria-label={alt}>
+  <noscript>
+    <img src={poster} alt={alt} />
+    <p>
+      <a href={cast}>Open the asciinema recording</a>
+    </p>
+  </noscript>
+</div>
+
+<script>
+  import * as AsciinemaPlayer from "asciinema-player";
+
+  for (const element of document.querySelectorAll("[data-cast]")) {
+    if (!(element instanceof HTMLElement)) continue;
+
+    const cast = element.dataset.cast;
+    if (!cast) continue;
+
+    AsciinemaPlayer.create(cast, element, {
+      autoplay: true,
+      loop: true,
+      preload: true,
+      theme: "dracula",
+      cols: 130,
+      rows: 48,
+      fit: "both",
+      controls: "auto",
+      cursorMode: "steady",
+    });
+  }
+</script>
+
+<style>
+  .dfrs-asciinema-demo {
+    width: min(100%, 800px);
+    height: min(75vw, 600px);
+    min-height: 480px;
+    margin: 1.5rem auto;
+    overflow: hidden;
+    border-radius: 0.5rem;
+  }
+
+  .dfrs-asciinema-demo :global(.ap-wrapper) {
+    width: 100%;
+    height: 100%;
+  }
+
+  .dfrs-asciinema-demo :global(.ap-player) {
+    max-width: 100%;
+  }
+
+  .dfrs-asciinema-demo noscript img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+</style>

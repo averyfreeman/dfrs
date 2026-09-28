@@ -3,6 +3,14 @@ title: Release notes
 description: Release notes for the dfrs fork.
 ---
 
+## 0.8.2
+
+The documentation-focused patch release adds:
+
+- high-resolution still frames for README and CLI usage examples;
+- a lightweight, self-hosted asciinema recording on the landing page;
+- a reproducible capture script for refreshing the landing recording.
+
 ## 0.8.1
 
 The documentation-focused patch release adds:

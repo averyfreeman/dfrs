@@ -4,6 +4,8 @@ docs-site/dist
 docs-site/.astro
 docs-site/.generated
 docs-site/public/rustdoc
+.scannerwork/
+.sonar-config.json
 .env*
 **/*.rs.bk
 *.1
