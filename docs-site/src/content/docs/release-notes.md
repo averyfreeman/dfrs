@@ -1,7 +1,15 @@
 ---
 title: Release notes
-description: The fork's 0.8.0 release line.
+description: Release notes for the dfrs fork.
 ---
+
+## 0.8.1
+
+The documentation-focused patch release adds:
+
+- stable terminal recordings for common filtering and formatting workflows;
+- a Dracula-inspired dark theme and a genuinely light theme for GitHub Pages;
+- README cleanup that removes distro-package references and the broken packaging badge.
 
 ## 0.8.0
 

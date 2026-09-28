@@ -1,0 +1,7 @@
+{"version":2,"width":110,"height":30,"timestamp":1790584516,"idle_time_limit":2.0,"command":"/tmp/dfrs-capture-OpOB53/readme.sh","env":{"SHELL":"/bin/zsh"}}
+[0.01619, "o", "\u001b[1;35mdemo@host\u001b[0m:\u001b[1;34m~/dfrs\u001b[0m$ dfrs --color always --mounts tests/fixtures/mounts.txt\r\n"]
+[0.639464, "o", "\u001b[34mFilesystem    \u001b[0m \u001b[34mType\u001b[0m \u001b[34m                    \u001b[0m \u001b[34m Used%\u001b[0m \u001b[34m Avail\u001b[0m \u001b[34m  Used\u001b[0m \u001b[34m  Size\u001b[0m \u001b[34mMounted on      \u001b[0m\r\n"]
+[0.639478, "o", "/dev/test-root ext4 \u001b[32m▇▇▇▇▇▇▇▇▇▇\u001b[0m\u001b[33m▇▇▇▇▇\u001b[0m\u001b[31m▇\u001b[0m\u001b[32m╍╍╍╍\u001b[0m \u001b[31m 76.7\u001b[37m%\u001b[0m\u001b[31m\u001b[0m \u001b[31m215.9G\u001b[0m \u001b[31m710.4G\u001b[0m \u001b[31m926.4G\u001b[0m /\r\n"]
+[0.639537, "o", "/dev/test-data apfs \u001b[32m\u001b[0m\u001b[33m\u001b[0m\u001b[31m\u001b[0m\u001b[34m╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍\u001b[0m \u001b[34m     -\u001b[0m \u001b[34m     0\u001b[0m \u001b[34m     0\u001b[0m \u001b[34m     0\u001b[0m /Volumes/My Data\r\n"]
+[1.846594, "o", "\u001b[1;35mdemo@host\u001b[0m:\u001b[1;34m~/dfrs\u001b[0m$ "]
+[2.656028, "x", "0"]

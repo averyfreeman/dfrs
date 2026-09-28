@@ -6,6 +6,8 @@ Display file system space usage using graphs and colors
 
 ![](contrib/screenshot.png)
 
+![dfrs reporting filesystem usage](docs-site/public/demos/dfrs-readme.gif)
+
 *dfrs* displays the amount of disk space available on the file system
 containing each file name argument. If no file name is given, the space
 available on all currently mounted file systems is shown.
@@ -19,26 +21,12 @@ Read the [online documentation](https://averyfreeman.github.io/dfrs/) for the
 CLI reference, architecture notes, development workflow, and generated
 [RustDoc](https://averyfreeman.github.io/dfrs/rustdoc/dfrs/).
 
-The 0.8.0 fork supports macOS arm64 and Linux x86_64/arm64 with Rust 1.96.0.
+The 0.8.1 fork supports macOS arm64 and Linux x86_64/arm64 with Rust 1.96.0.
 Windows and Intel macOS are outside this release line.
 
 ## Installation
 
-<a href="https://repology.org/project/dfrs/versions"><img align="right" src="https://repology.org/badge/vertical-allrepos/dfrs.svg" alt="Packaging status"></a>
-
     cargo install dfrs
-
-### Arch Linux
-
-    pacman -S dfrs
-
-### Debian sid/bullseye
-
-    apt install dfrs
-
-### Alpine
-
-    apk add dfrs
 
 ## License
 

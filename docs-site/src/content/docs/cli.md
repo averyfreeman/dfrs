@@ -14,6 +14,37 @@ dfrs --local --human-readable
 With no path arguments, dfrs reports visible capacity-bearing mounts. With path
 arguments, it selects the deepest matching mount for each canonicalized path.
 
+## See it in action
+
+The recordings below use `tests/fixtures/mounts.txt` so their output stays
+stable across machines. Omit `--mounts tests/fixtures/mounts.txt` to use the
+native mount provider on your system.
+
+### Default filtering and broader visibility
+
+```sh
+dfrs --color always --mounts tests/fixtures/mounts.txt
+dfrs --color always --all --mounts tests/fixtures/mounts.txt
+```
+
+The first command shows the concise capacity-bearing view; `--all` also keeps
+pseudo mounts such as `tmpfs` in the report.
+
+![Default and --all dfrs reports](/dfrs/demos/dfrs-visibility.gif)
+
+### Custom output columns
+
+```sh
+dfrs --color always --si \
+  --columns filesystem,bar,used_percentage,available,capacity,mounted_on \
+  --mounts tests/fixtures/mounts.txt
+```
+
+Use `--columns` to keep the report focused, and `--si` when decimal units are
+more useful than powers of 1024.
+
+![Custom dfrs output columns](/dfrs/demos/dfrs-columns.gif)
+
 ## Visibility
 
 - `-a` / `--more` broadens the listing; repeat `-a` or use `--all` to include

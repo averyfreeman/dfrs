@@ -1,0 +1,11 @@
+{"version":2,"width":110,"height":30,"timestamp":1790584405,"idle_time_limit":2.0,"command":"/tmp/dfrs-capture-OpOB53/visibility.sh","env":{"SHELL":"/bin/zsh"}}
+[0.141415, "o", "\u001b[1;35mdemo@host\u001b[0m:\u001b[1;34m~/dfrs\u001b[0m$ dfrs --color always --mounts tests/fixtures/mounts.txt\r\n"]
+[0.76725, "o", "\u001b[34mFilesystem    \u001b[0m \u001b[34mType\u001b[0m \u001b[34m                    \u001b[0m \u001b[34m Used%\u001b[0m \u001b[34m Avail\u001b[0m \u001b[34m  Used\u001b[0m \u001b[34m  Size\u001b[0m \u001b[34mMounted on      \u001b[0m\r\n"]
+[0.767278, "o", "/dev/test-root ext4 \u001b[32m▇▇▇▇▇▇▇▇▇▇\u001b[0m\u001b[33m▇▇▇▇▇\u001b[0m\u001b[31m▇\u001b[0m\u001b[32m╍╍╍╍\u001b[0m \u001b[31m 76.7\u001b[37m%\u001b[0m\u001b[31m\u001b[0m \u001b[31m216.2G\u001b[0m \u001b[31m710.2G\u001b[0m \u001b[31m926.4G\u001b[0m /\r\n"]
+[0.767309, "o", "/dev/test-data apfs \u001b[32m\u001b[0m\u001b[33m\u001b[0m\u001b[31m\u001b[0m\u001b[34m╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍\u001b[0m \u001b[34m     -\u001b[0m \u001b[34m     0\u001b[0m \u001b[34m     0\u001b[0m \u001b[34m     0\u001b[0m /Volumes/My Data\r\n"]
+[2.18053, "o", "\u001b[1;35mdemo@host\u001b[0m:\u001b[1;34m~/dfrs\u001b[0m$ dfrs --color always --all --mounts tests/fixtures/mounts.txt\r\n"]
+[2.801625, "o", "\u001b[34mFilesystem    \u001b[0m \u001b[34mType \u001b[0m \u001b[34m                    \u001b[0m \u001b[34m Used%\u001b[0m \u001b[34m Avail\u001b[0m \u001b[34m  Used\u001b[0m \u001b[34m  Size\u001b[0m \u001b[34mMounted on      \u001b[0m\r\n"]
+[2.801643, "o", "/dev/test-root ext4  \u001b[32m▇▇▇▇▇▇▇▇▇▇\u001b[0m\u001b[33m▇▇▇▇▇\u001b[0m\u001b[31m▇\u001b[0m\u001b[32m╍╍╍╍\u001b[0m \u001b[31m 76.7\u001b[37m%\u001b[0m\u001b[31m\u001b[0m \u001b[31m216.2G\u001b[0m \u001b[31m710.2G\u001b[0m \u001b[31m926.4G\u001b[0m /\r\n"]
+[2.801674, "o", "/dev/test-data apfs  \u001b[32m\u001b[0m\u001b[33m\u001b[0m\u001b[31m\u001b[0m\u001b[34m╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍\u001b[0m \u001b[34m     -\u001b[0m \u001b[34m     0\u001b[0m \u001b[34m     0\u001b[0m \u001b[34m     0\u001b[0m /Volumes/My Data\r\n"]
+[2.801729, "o", "tmpfs          tmpfs \u001b[32m\u001b[0m\u001b[33m\u001b[0m\u001b[31m\u001b[0m\u001b[34m╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍\u001b[0m \u001b[34m     -\u001b[0m \u001b[34m     0\u001b[0m \u001b[34m     0\u001b[0m \u001b[34m     0\u001b[0m /proc\r\n"]
+[4.616271, "x", "0"]

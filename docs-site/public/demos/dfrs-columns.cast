@@ -1,0 +1,7 @@
+{"version":2,"width":110,"height":30,"timestamp":1790584519,"idle_time_limit":2.0,"command":"/tmp/dfrs-capture-OpOB53/columns.sh","env":{"SHELL":"/bin/zsh"}}
+[0.014075, "o", "\u001b[1;35mdemo@host\u001b[0m:\u001b[1;34m~/dfrs\u001b[0m$ dfrs --color always --si --columns filesystem,bar,used_percentage,available,capacity,mounted_on --mounts tests/fixtures/mounts.txt\r\n"]
+[0.633957, "o", "\u001b[34mFilesystem    \u001b[0m \u001b[34m                    \u001b[0m \u001b[34m Used%\u001b[0m \u001b[34m Avail\u001b[0m \u001b[34m  Size\u001b[0m \u001b[34mMounted on      \u001b[0m\r\n"]
+[0.63397, "o", "/dev/test-root \u001b[32m▇▇▇▇▇▇▇▇▇▇\u001b[0m\u001b[33m▇▇▇▇▇\u001b[0m\u001b[31m▇\u001b[0m\u001b[32m╍╍╍╍\u001b[0m \u001b[31m 76.7\u001b[37m%\u001b[0m\u001b[31m\u001b[0m \u001b[31m231.8G\u001b[0m \u001b[31m994.7G\u001b[0m /\r\n"]
+[0.634006, "o", "/dev/test-data \u001b[32m\u001b[0m\u001b[33m\u001b[0m\u001b[31m\u001b[0m\u001b[34m╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍\u001b[0m \u001b[34m     -\u001b[0m \u001b[34m     0\u001b[0m \u001b[34m     0\u001b[0m /Volumes/My Data\r\n"]
+[1.841049, "o", "\u001b[1;35mdemo@host\u001b[0m:\u001b[1;34m~/dfrs\u001b[0m$ "]
+[2.652096, "x", "0"]

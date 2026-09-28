@@ -70,5 +70,5 @@ uninstall:
 	$(RM) -f $(DESTDIR)$(DATAROOTDIR)/fish/vendor_completions.d/dfrs.fish
 
 release: all
-	@echo "dfrs 0.8.0 is staged on release/0.8.0; use the Git-BBQ tag and push workflow."
+	@echo "dfrs 0.8.1 is staged on main; use the Git-BBQ tag and push workflow."
 	@echo "This fork intentionally does not create signed archives or a GitHub Release."
